@@ -1,0 +1,958 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV | นายปิยณัฐ วงค์วุฒิ</title>
+  <style>
+    :root {
+      --ink: #14212b;
+      --text: #2f3b46;
+      --muted: #65717d;
+      --line: #d8e2e8;
+      --paper: #ffffff;
+      --soft: #f5f8fa;
+      --navy: #0d2f45;
+      --teal: #0e7c86;
+      --gold: #b8892e;
+      --gold-soft: #fff7e4;
+      --shadow: 0 22px 60px rgba(16, 47, 69, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #eef3f5;
+      color: var(--text);
+      font-family: "Leelawadee UI", "Noto Sans Thai", Tahoma, Arial, sans-serif;
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    .actions {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px;
+      background: rgba(238, 243, 245, 0.95);
+      border-bottom: 1px solid rgba(216, 226, 232, 0.9);
+      backdrop-filter: blur(8px);
+    }
+
+    .actions button {
+      min-height: 40px;
+      border: 0;
+      border-radius: 6px;
+      padding: 0 16px;
+      background: var(--navy);
+      color: #fff;
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .actions button:hover {
+      background: var(--teal);
+    }
+
+    .page {
+      width: min(100%, 980px);
+      margin: 28px auto;
+      overflow: hidden;
+      border-radius: 8px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .masthead {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 28px;
+      padding: 38px 46px 32px;
+      color: #fff;
+      background:
+        linear-gradient(135deg, rgba(13, 47, 69, 0.98), rgba(14, 124, 134, 0.94)),
+        var(--navy);
+    }
+
+    .profile-photo {
+      width: 150px;
+      margin: 0;
+      justify-self: end;
+      aspect-ratio: 3 / 4;
+      border: 4px solid rgba(255, 255, 255, 0.82);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
+    }
+
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .eyebrow {
+      margin-bottom: 8px;
+      color: #fff1c9;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 36px;
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    .role {
+      margin-top: 8px;
+      color: #eaf8f9;
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .summary {
+      max-width: 720px;
+      margin-top: 15px;
+      color: #f7fbfc;
+      font-size: 14.5px;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .contact span {
+      min-height: 30px;
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 6px;
+      padding: 4px 10px;
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      font-size: 12.5px;
+      font-weight: 700;
+    }
+
+    .contact a {
+      color: #fff;
+      font-weight: 900;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .body {
+      display: grid;
+      grid-template-columns: 305px 1fr;
+      gap: 32px;
+      padding: 34px 46px 42px;
+    }
+
+    .sidebar {
+      border-right: 1px solid var(--line);
+      padding-right: 28px;
+    }
+
+    section + section {
+      margin-top: 25px;
+    }
+
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      color: var(--navy);
+      font-size: 15px;
+      letter-spacing: 0;
+    }
+
+    h2::before {
+      content: "";
+      width: 8px;
+      height: 22px;
+      flex: 0 0 auto;
+      border-radius: 3px;
+      background: var(--teal);
+    }
+
+    h3 {
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.35;
+    }
+
+    .sub {
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 12.5px;
+    }
+
+    .target-box {
+      border-left: 4px solid var(--gold);
+      border-radius: 6px;
+      padding: 13px 14px;
+      background: var(--gold-soft);
+      color: #4b3915;
+      font-size: 13.5px;
+      font-weight: 800;
+    }
+
+    .skills {
+      display: grid;
+      gap: 12px;
+    }
+
+    .skill-group {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 13px 14px;
+      background: #fbfdfe;
+    }
+
+    .skill-group strong {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--navy);
+      font-size: 13.5px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .chip {
+      min-height: 26px;
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid #cbdbe1;
+      border-radius: 6px;
+      padding: 4px 9px;
+      background: var(--soft);
+      color: #284858;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .list {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .list li {
+      position: relative;
+      padding-left: 18px;
+      font-size: 13.6px;
+    }
+
+    .list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.72em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--teal);
+    }
+
+    .list a,
+    .project-link {
+      color: var(--navy);
+      font-weight: 900;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .ai-list {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .ai-list li {
+      border-left: 3px solid var(--teal);
+      padding-left: 10px;
+      color: var(--text);
+      font-size: 12.9px;
+      line-height: 1.45;
+    }
+
+    .ai-list strong {
+      color: var(--navy);
+      font-weight: 900;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 16px;
+    }
+
+    .item {
+      position: relative;
+      padding-left: 22px;
+    }
+
+    .item::before {
+      content: "";
+      position: absolute;
+      left: 3px;
+      top: 6px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 4px #fff4d8;
+    }
+
+    .item::after {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 21px;
+      bottom: -10px;
+      width: 1px;
+      background: var(--line);
+    }
+
+    .item:last-child::after {
+      display: none;
+    }
+
+    .project {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      background: #fbfdfe;
+    }
+
+    .project + .project {
+      margin-top: 13px;
+    }
+
+    .project ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+    }
+
+    .project li {
+      margin: 5px 0;
+      font-size: 13.6px;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      margin-top: 12px;
+      border: 1px solid #c8d8de;
+      border-radius: 6px;
+      padding: 5px 10px;
+      background: #fff;
+      font-size: 12.5px;
+      text-decoration: none;
+    }
+
+    .project-link:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+    }
+
+    .highlight {
+      color: #806016;
+      font-weight: 900;
+    }
+
+    .work-skills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .work-skill {
+      min-height: 112px;
+      border: 1px solid #d6e4e8;
+      border-radius: 8px;
+      padding: 14px;
+      background: var(--soft);
+      font-size: 13.2px;
+    }
+
+    .work-skill strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--teal);
+      font-size: 13.5px;
+    }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      padding: 15px 46px 24px;
+      color: var(--muted);
+      font-size: 11.5px;
+      text-align: center;
+    }
+
+    @media (max-width: 780px) {
+      .page {
+        margin: 0;
+        border-radius: 0;
+      }
+
+      .masthead,
+      .body {
+        grid-template-columns: 1fr;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      .profile-photo {
+        order: -1;
+        width: 132px;
+        justify-self: start;
+      }
+
+      h1 {
+        font-size: 29px;
+      }
+
+      .sidebar {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+        padding-right: 0;
+        padding-bottom: 24px;
+      }
+
+      .work-skills {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @page {
+      size: A4;
+      margin: 6mm;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        font-size: 10px;
+        line-height: 1.28;
+      }
+
+      .actions {
+        display: none;
+      }
+
+      .page {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .masthead {
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 10px;
+        padding: 10px 14px 9px;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .profile-photo {
+        width: 62px;
+        border-width: 2px;
+        border-radius: 4px;
+        box-shadow: none;
+      }
+
+      .eyebrow {
+        margin-bottom: 3px;
+        font-size: 8.5px;
+      }
+
+      h1 {
+        font-size: 21px;
+        line-height: 1.1;
+      }
+
+      .role {
+        margin-top: 4px;
+        font-size: 10.5px;
+      }
+
+      .summary {
+        max-width: none;
+        margin-top: 6px;
+        font-size: 9.2px;
+        line-height: 1.26;
+      }
+
+      .contact {
+        gap: 3px;
+        margin-top: 7px;
+      }
+
+      .contact span {
+        min-height: 0;
+        border-radius: 4px;
+        padding: 1px 5px;
+        font-size: 8.5px;
+      }
+
+      .body {
+        grid-template-columns: 218px 1fr;
+        gap: 12px;
+        padding: 10px 14px 9px;
+      }
+
+      .sidebar {
+        padding-right: 12px;
+      }
+
+      .footer {
+        padding: 3px 14px 0;
+        font-size: 7.5px;
+      }
+
+      section + section {
+        margin-top: 8px;
+      }
+
+      h2 {
+        gap: 6px;
+        margin-bottom: 4px;
+        font-size: 10.5px;
+      }
+
+      h2::before {
+        width: 5px;
+        height: 13px;
+      }
+
+      h3 {
+        font-size: 10.3px;
+        line-height: 1.2;
+      }
+
+      .sub {
+        margin-top: 1px;
+        font-size: 8.8px;
+        line-height: 1.22;
+      }
+
+      .target-box {
+        border-left-width: 3px;
+        border-radius: 5px;
+        padding: 5px 7px;
+        font-size: 9.1px;
+      }
+
+      .skills {
+        gap: 5px;
+      }
+
+      .skill-group {
+        border-radius: 5px;
+        padding: 5px 6px;
+      }
+
+      .skill-group strong {
+        margin-bottom: 3px;
+        font-size: 9.2px;
+      }
+
+      .chips {
+        gap: 3px;
+      }
+
+      .chip {
+        min-height: 0;
+        border-radius: 4px;
+        padding: 1px 5px;
+        font-size: 8.2px;
+        font-weight: 700;
+      }
+
+      .list {
+        gap: 3px;
+      }
+
+      .list li {
+        padding-left: 10px;
+        font-size: 9px;
+        line-height: 1.25;
+      }
+
+      .list li::before {
+        top: 0.58em;
+        width: 4px;
+        height: 4px;
+      }
+
+      .ai-list {
+        gap: 3px;
+      }
+
+      .ai-list li {
+        border-left-width: 2px;
+        padding-left: 6px;
+        font-size: 8.7px;
+        line-height: 1.22;
+      }
+
+      .timeline {
+        gap: 6px;
+      }
+
+      .item {
+        padding-left: 12px;
+      }
+
+      .item::before {
+        left: 2px;
+        top: 4px;
+        width: 6px;
+        height: 6px;
+        box-shadow: 0 0 0 2px #fff4d8;
+      }
+
+      .item::after {
+        left: 5px;
+        top: 13px;
+        bottom: -5px;
+      }
+
+      .project {
+        border-radius: 5px;
+        padding: 7px;
+      }
+
+      .project + .project {
+        margin-top: 6px;
+      }
+
+      .project ul {
+        margin: 4px 0 0;
+        padding-left: 13px;
+      }
+
+      .project li {
+        margin: 2px 0;
+        font-size: 9px;
+        line-height: 1.22;
+      }
+
+      .project-link {
+        min-height: 0;
+        margin-top: 4px;
+        border: 0;
+        padding: 0;
+        background: transparent;
+        font-size: 8.8px;
+      }
+
+      .work-skills {
+        gap: 5px;
+      }
+
+      .work-skill {
+        min-height: 0;
+        border-radius: 5px;
+        padding: 5px 6px;
+        font-size: 8.8px;
+        line-height: 1.22;
+      }
+
+      .work-skill strong {
+        margin-bottom: 2px;
+        font-size: 9px;
+      }
+
+      .skill-group,
+      .target-box,
+      .chip,
+      .project,
+      .work-skill {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      section,
+      .project,
+      .item,
+      .work-skill {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="actions">
+    <button type="button" onclick="window.print()">พิมพ์ / บันทึกเป็น PDF</button>
+  </div>
+
+  <main class="page">
+    <header class="masthead">
+      <div>
+        <p class="eyebrow">Curriculum Vitae</p>
+        <h1>นายปิยณัฐ วงค์วุฒิ</h1>
+        <p class="role">Cybersecurity / Web Development / IT Support</p>
+        <p class="summary">
+          นักศึกษาวิศวกรรมคอมพิวเตอร์ เอก Cybersecurity / Software มีประสบการณ์ทำโปรเจกต์ Web Vulnerability Scanner,
+          เว็บบริการบน Vercel และงาน IT Support ให้ร้านคอมพิวเตอร์ สนใจงานฝึกงานหรือเริ่มต้นทำงานด้าน Cybersecurity,
+          Web Development และ IT Support พร้อมเรียนรู้มาตรฐานการทำงานจริงและรับผิดชอบงานอย่างเป็นระบบ
+        </p>
+
+        <div class="contact">
+          <span>อายุ 24 ปี</span>
+          <span>โทร: 061-837-7652</span>
+          <span>อีเมล: piyanat.won67@psru.ac.th</span>
+          <span>GitHub: <a href="https://github.com/piyanat012" target="_blank" rel="noreferrer">github.com/piyanat012</a></span>
+          <span>ที่อยู่: 129/2 ม.4 ต.วงฆ้อง อ.พรหมพิราม จ.พิษณุโลก 65180</span>
+        </div>
+      </div>
+      <figure class="profile-photo">
+        <img src="a96e45ff-6cab-4c7a-a2b1-206bc9c3774a.png" alt="Profile photo">
+      </figure>
+    </header>
+
+    <div class="body">
+      <aside class="sidebar">
+        <section>
+          <h2>ตำแหน่งที่สนใจ</h2>
+          <p class="target-box">Cybersecurity Intern / Web Developer Intern / IT Support Technician</p>
+        </section>
+
+        <section>
+          <h2>ทักษะด้านเทคนิค</h2>
+          <div class="skills">
+            <div class="skill-group">
+              <strong>Languages</strong>
+              <div class="chips">
+                <span class="chip">TypeScript</span>
+                <span class="chip">JavaScript</span>
+                <span class="chip">Python</span>
+                <span class="chip">Java</span>
+                <span class="chip">C/C++</span>
+                <span class="chip">HTML5 / CSS3</span>
+                <span class="chip">SQL</span>
+                <span class="chip">PHP</span>
+                <span class="chip">C#</span>
+                <span class="chip">Bash</span>
+                <span class="chip">PowerShell</span>
+                <span class="chip">JSON</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <strong>Web & Backend</strong>
+              <div class="chips">
+                <span class="chip">React</span>
+                <span class="chip">Next.js</span>
+                <span class="chip">FastAPI</span>
+                <span class="chip">Node.js / Express</span>
+                <span class="chip">TailwindCSS</span>
+                <span class="chip">Firebase</span>
+                <span class="chip">LIFF / LINE Login</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <strong>Cybersecurity</strong>
+              <div class="chips">
+                <span class="chip">OWASP Top 10</span>
+                <span class="chip">OWASP ZAP</span>
+                <span class="chip">Web Vulnerability Scanning</span>
+                <span class="chip">Burp Suite</span>
+                <span class="chip">Security Headers</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <strong>AI, Data & DevOps</strong>
+              <div class="chips">
+                <span class="chip">Google AI Studio</span>
+                <span class="chip">OpenAI Codex</span>
+                <span class="chip">Claude Code</span>
+                <span class="chip">GitHub Copilot</span>
+                <span class="chip">Gemini CLI</span>
+                <span class="chip">Google GenAI</span>
+                <span class="chip">Ollama</span>
+                <span class="chip">MongoDB</span>
+                <span class="chip">PostgreSQL</span>
+                <span class="chip">Docker</span>
+                <span class="chip">Linux</span>
+                <span class="chip">Vercel</span>
+                <span class="chip">Git / Git Flow</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>AI Engineering Tools</h2>
+          <ul class="ai-list">
+            <li><strong>Prompt Engineering:</strong> ออกแบบ Prompt และ System Prompt เพื่อให้ AI ช่วยเขียนโค้ด วิเคราะห์ปัญหา และสร้างเอกสารได้ตรงเป้าหมาย</li>
+            <li><strong>Codex & Claude Code:</strong> ช่วย refactor โค้ด และเขียน unit tests</li>
+            <li><strong>Google AI Studio:</strong> ทดลอง prompt และวิเคราะห์แนวทางพัฒนา AI features สำหรับงานต้นแบบ</li>
+            <li><strong>AI API Integration:</strong> เชื่อมต่อ AI model กับเว็บหรือ backend ผ่าน API</li>
+            <li><strong>RAG Concept:</strong> เข้าใจแนวคิดให้ AI ค้นข้อมูลจากเอกสารหรือฐานข้อมูลก่อนตอบ</li>
+            <li><strong>AI Output Validation:</strong> ตรวจผลลัพธ์จาก AI เพื่อลด hallucination ก่อนนำไปใช้งานจริง</li>
+            <li><strong>Workflow Automation:</strong> ใช้ AI ช่วยงาน coding, debugging, testing และ documentation</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>ภาษา</h2>
+          <ul class="list">
+            <li>ภาษาไทย: เจ้าของภาษา</li>
+            <li>ภาษาอังกฤษ: <span class="highlight">พื้นฐาน</span></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>ใบรับรอง / คอร์ส</h2>
+          <ul class="list">
+            <li><span class="highlight">PSRU Cyber Hackathon (2026) #3 - Advanced Level</span> - โครงการอบรมเชิงปฏิบัติการและแข่งขันทักษะความปลอดภัยทางไซเบอร์ ครั้งที่ 3, วันที่ 19-21 มีนาคม 2569 (21 ชั่วโมง)</li>
+            <li>Certificate ID: <a href="Certificate_PSRUHACK26-B77068AC.pdf" target="_blank" rel="noreferrer">PSRUHACK26-B77068AC</a></li>
+          </ul>
+        </section>
+      </aside>
+
+      <article>
+        <section>
+          <h2>การศึกษา</h2>
+          <div class="timeline">
+            <div class="item">
+              <h3>มหาวิทยาลัยราชภัฏพิบูลสงคราม</h3>
+              <p>คณะเทคโนโลยีอุตสาหกรรม สาขาวิศวกรรมคอมพิวเตอร์</p>
+              <p class="sub">เอก Cybersecurity / Software | กำลังศึกษา</p>
+            </div>
+
+            <div class="item">
+              <h3>วิทยาลัยเทคนิคพิษณุโลก</h3>
+              <p>ประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.)</p>
+              <p class="sub">สาขาวิทยาการคอมพิวเตอร์</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>โปรเจกต์ที่เกี่ยวข้อง</h2>
+          <div class="project">
+            <h3><span class="highlight">Wabpentest - Web Vulnerability Scanner</span></h3>
+            <p class="sub">Final Project | Web Security / AI-Assisted Vulnerability Scanning</p>
+            <ul>
+              <li><strong>บทบาท:</strong> พัฒนา FastAPI backend, worker workflow และ web UI สำหรับระบบสแกนช่องโหว่เว็บ</li>
+              <li><strong>เทคโนโลยี:</strong> Python, FastAPI, OWASP ZAP, Celery, Redis, Docker Compose, Ollama, HTML/CSS/JavaScript</li>
+              <li><strong>ผลงาน:</strong> ระบบรับ URL เป้าหมาย, สแกนด้วย OWASP ZAP และ baseline scanner, map findings กับ OWASP Top 10 และใช้ AI อธิบายผลเป็นภาษาไทย</li>
+              <li><strong>Security/Privacy:</strong> redact ข้อมูลอ่อนไหวก่อนส่งเข้า AI layer และมี unit tests สำหรับ OWASP mapping, baseline scan และ AI privacy redaction</li>
+            </ul>
+            <a class="project-link" href="https://github.com/piyanat012/wabpentest-final-project" target="_blank" rel="noreferrer">GitHub Repository</a>
+          </div>
+
+          <div class="project">
+            <h3><span class="highlight">ChaiLai Nails & Spa Website</span></h3>
+            <p class="sub">Frontend Web Project | Service Website / Booking UI</p>
+            <ul>
+              <li><strong>บทบาท:</strong> ออกแบบและพัฒนาเว็บสำหรับธุรกิจ Nails & Spa เพื่อแสดงข้อมูลบริการ ราคา และช่องทางการจอง</li>
+              <li><strong>เทคโนโลยี:</strong> React, JavaScript, TailwindCSS, Firebase, LIFF/LINE Login, Google GenAI, Vercel</li>
+              <li><strong>ผลงาน:</strong> สร้างเว็บ responsive สำหรับมือถือ มี UI บริการร้าน และ deploy ขึ้น Vercel เพื่อใช้งานจริง</li>
+            </ul>
+            <a class="project-link" href="https://v0-project-three-gray.vercel.app/" target="_blank" rel="noreferrer">Live Website</a>
+          </div>
+        </section>
+
+        <section>
+          <h2>ประสบการณ์</h2>
+          <div class="timeline">
+            <div class="item">
+              <h3><span class="highlight">Phitsanulok IT Service</span></h3>
+              <p class="sub">IT Support / ตรวจสอบอุปกรณ์ / Web Page Support</p>
+              <ul class="list">
+                <li>ซ่อม ตรวจสอบ และช่วยแก้ปัญหาอุปกรณ์คอมพิวเตอร์และระบบ IT เบื้องต้นให้กับลูกค้า</li>
+                <li>ช่วยจัดทำและปรับแต่งหน้าเว็บของร้านให้แสดงข้อมูลบริการได้ชัดเจนและใช้งานง่าย</li>
+                <li>ใช้ทักษะการวิเคราะห์ปัญหา การสื่อสารกับลูกค้า การดูแลอุปกรณ์ IT และการพัฒนาเว็บพื้นฐาน</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>ทักษะการทำงาน</h2>
+          <div class="work-skills">
+            <div class="work-skill">
+              <strong>เรียนรู้และปรับตัว</strong>
+              เรียนรู้เครื่องมือใหม่ได้เร็ว เปิดรับคำแนะนำ และปรับตัวกับรูปแบบการทำงานของทีมได้ดี
+            </div>
+            <div class="work-skill">
+              <strong>รับผิดชอบงาน</strong>
+              ติดตามงานที่ได้รับมอบหมาย ใส่ใจรายละเอียด และแจ้งความคืบหน้าอย่างชัดเจน
+            </div>
+            <div class="work-skill">
+              <strong>แก้ปัญหา</strong>
+              วิเคราะห์อาการ แยกสาเหตุ ทดลองวิธีแก้ และสรุปแนวทางแก้ไขให้เข้าใจง่าย
+            </div>
+            <div class="work-skill">
+              <strong>สื่อสารกับผู้ใช้</strong>
+              อธิบายปัญหาทางเทคนิคให้ผู้ใช้ทั่วไปเข้าใจได้ และรับฟังความต้องการของลูกค้า
+            </div>
+            <div class="work-skill">
+              <strong>ทำงานเป็นทีม</strong>
+              ประสานงาน แบ่งงาน และช่วยสนับสนุนทีมเมื่อต้องแก้ปัญหาหรือทำงานเร่ง
+            </div>
+            <div class="work-skill">
+              <strong>คิดเป็นระบบ</strong>
+              วางลำดับขั้นตอน ตรวจสอบผลลัพธ์ และคำนึงถึงความปลอดภัยของระบบ
+            </div>
+          </div>
+        </section>
+      </article>
+    </div>
+
+    <footer class="footer">
+      นายปิยณัฐ วงค์วุฒิ | CV for Cybersecurity, Web Development and IT Support Roles
+    </footer>
+  </main>
+</body>
+</html>
